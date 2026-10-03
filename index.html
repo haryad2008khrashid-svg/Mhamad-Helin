@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>بانگهێشتنامەی محمد و هێلین</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600&family=Cairo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --bg-deep:#0a2018;
@@ -17,6 +15,7 @@
     --gold-dim:rgba(201,162,74,0.35);
     --cream:#f3ead9;
     --cream-dim:rgba(243,234,217,0.72);
+    --system-font:-apple-system,BlinkMacSystemFont,"Geeza Pro","Segoe UI",Tahoma,Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html,body{
@@ -24,7 +23,7 @@
     min-height:100%;
   }
   body{
-    font-family:'Cairo', sans-serif;
+    font-family:var(--system-font);
     color:var(--cream);
     display:flex;
     justify-content:center;
@@ -152,7 +151,7 @@
     align-items: center;
     color: var(--gold-light);
     font-size: 28px;
-    font-family: 'Aref Ruqaa', serif;
+    font-family:var(--system-font);
     border: 3px solid var(--gold);
     box-shadow: 0 12px 30px rgba(0,0,0,0.8), 0 0 20px rgba(201,162,74,0.5);
     cursor: pointer;
@@ -173,7 +172,7 @@
     color: var(--gold-light);
     padding: 8px 30px;
     border-radius: 20px;
-    font-family: 'Cairo', sans-serif;
+    font-family:var(--system-font);
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -245,7 +244,7 @@
   }
 
   .eyebrow{
-    font-family:'Reem Kufi', sans-serif;
+    font-family:var(--system-font);
     font-size:15px;
     color:var(--gold-light);
     margin-top:22px;
@@ -265,7 +264,7 @@
   .ring-path.r2{ stroke:var(--gold-light); }
 
   .names{
-    font-family:'Aref Ruqaa', serif;
+    font-family:var(--system-font);
     font-weight:700;
     font-size:42px;
     line-height:1.2;
@@ -278,7 +277,7 @@
     animation: shimmer 5s linear infinite;
   }
   .names .amp{
-    font-family:'Cairo', sans-serif;
+    font-family:var(--system-font);
     font-size:20px;
     font-weight:400;
     color:var(--cream-dim);
@@ -332,7 +331,7 @@
     margin-top:16px;
   }
   .venue-name{
-    font-family:'Reem Kufi', sans-serif;
+    font-family:var(--system-font);
     font-size:22px;
     color:var(--gold-light);
   }
@@ -352,7 +351,7 @@
     max-width: 350px;
   }
   .countdown-title {
-    font-family: 'Reem Kufi', sans-serif;
+    font-family:var(--system-font);
     font-size: 14px;
     color: var(--gold-light);
     margin-bottom: 10px;
@@ -374,7 +373,7 @@
     font-size: 19px;
     font-weight: bold;
     color: var(--gold-light);
-    font-family: 'Cairo', sans-serif;
+    font-family:var(--system-font);
   }
   .c-label {
     font-size: 10px;
@@ -390,7 +389,7 @@
     padding-inline-end:6px;
   }
   .timeline-title{
-    font-family:'Reem Kufi', sans-serif;
+    font-family:var(--system-font);
     font-size:15px;
     color:var(--gold);
     margin-bottom:16px;
@@ -436,7 +435,7 @@
     padding-right:18px;
   }
   .t-time{
-    font-family:'Reem Kufi', sans-serif;
+    font-family:var(--system-font);
     font-size:13px;
     color:var(--gold-light);
     white-space:nowrap;
@@ -454,7 +453,7 @@
     color:var(--gold-light);
     text-decoration:none;
     font-size:13.5px;
-    font-family:'Cairo', sans-serif;
+    font-family:var(--system-font);
     transition:all 0.3s ease;
   }
   .location-btn:hover{
@@ -468,6 +467,42 @@
     margin-top:20px;
     font-size:12px;
     color:var(--cream-dim);
+  }
+  @media(max-width:520px){
+    body{padding:12px 8px;align-items:stretch}
+    .card{min-height:calc(100vh - 24px);padding:28px 18px 24px;border-radius:16px}
+    .corner{width:54px;height:54px}
+    .corner.tl{top:12px;left:12px}.corner.tr{top:12px;right:12px}
+    .corner.bl{bottom:12px;left:12px}.corner.br{bottom:12px;right:12px}
+    .frame-border{inset:8px}
+    .eyebrow{font-size:13px;margin-top:18px}
+    .rings-wrap{width:92px;height:50px;margin:10px 0}
+    .names{font-size:clamp(1.8rem,8.5vw,2.35rem);line-height:1.35;margin:10px 0 14px}
+    .names .amp{font-size:18px;margin:0 5px}
+    .quran-box{padding:12px;font-size:13px;line-height:1.9}
+    .invite-line{font-size:14px}.venue-name{font-size:20px}
+    .countdown-section{margin-top:20px}
+    .countdown-boxes{gap:6px}
+    .c-box{min-width:0;flex:1;padding:8px 4px}
+    .c-num{font-size:18px}
+    .timeline{margin-top:22px}
+    .timeline-item{gap:8px;padding:8px 18px 8px 0}
+    .t-label{font-size:12.5px;padding-right:12px}
+    .t-time{font-size:12px}
+    .location-btn{margin-top:22px;padding:10px 16px;font-size:13px}
+    .footer-note{font-size:11.5px}
+    .wax-seal{width:86px;height:86px;font-size:24px}
+    .open-btn-tag{padding:8px 22px}
+  }
+  @media(max-width:360px){
+    body{padding:8px 6px}
+    .card{min-height:calc(100vh - 16px);padding:24px 14px 20px}
+    .names{font-size:clamp(1.65rem,8.5vw,1.95rem)}
+    .quran-box{font-size:12.5px}
+    .countdown-boxes{gap:4px}
+    .c-num{font-size:17px}
+    .t-label{font-size:12px}
+    .t-time{font-size:11px}
   }
 </style>
 </head>
